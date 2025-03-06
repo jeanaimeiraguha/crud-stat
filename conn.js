@@ -58,13 +58,18 @@ db.connect((err) => {
     });
   });
 });
-const sqldelete="DELETE FROM users whered 2";
+const sqldelete="DELETE FROM users where id=18";
 db.query(sqldelete,(err)=>{
   if (err) {
     console.log(" Failed deleted to Record ")
+    return;
     
   }
   else{
+    console.log("Record deleted")
+  }
+})
+
     console.log("Record deleted")
   }
 })
